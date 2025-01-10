@@ -36,6 +36,6 @@ server:
 	go run cmd/main.go
 
 mock:
-	mockgen -package mockdb -destination internal/db/mock/store.go github.com/litmus-zhang/task_manager/internal/db Store
+	mockgen -package mockdb -destination internal/db/mock/store.go github.com/litmus-zhang/go_template/internal/db Store
 
 .PHONY: startdb stopdb migrateup migrateup1 migratedown migratedown1 new_migration sqlc test server mock
