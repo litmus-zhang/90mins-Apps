@@ -4,15 +4,27 @@ import Stopwatch from "../components/Stopwatch";
 ---
 
 <Layout title="Stopwatch App">
-  <main class="flex flex-col items-center justify-center h-screen">
-    <section class="flex flex-col items-center font-bold text-xl my-8">
+  <main class="relative flex flex-col items-center justify-center h-screen bg-cover bg-center" style="background-image: url('https://plus.unsplash.com/premium_photo-1661895081205-791c94434c78?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <div class="absolute z-1 inset-0 bg-cover bg-center" style="background-image: url('https://plus.unsplash.com/premium_photo-1664541337092-81ad747fc1f6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+    <div class="absolute inset-0 bg-black opacity-75"></div>
+    <section class="relative z-10 flex flex-col items-center font-bold text-xl my-8">
       <h1 class="text-2xl text-center">
-        <span class="text-green-500"> Team Greatness </span>
-        VS
+        <span class="text-blue-500"> Team Greatness </span>
+        <span class="vs-word text-yellow-500"> VS </span>
         <span class="text-red-500"> Team Phoenix </span>
       </h1>
     </section>
-    <h1 class="text-center text-3xl font-bold mt-8">Stopwatch</h1>
-    <Stopwatch client:load />
+    
+    <div class="flex flex-col items-center justify-center z-10">
+      <Stopwatch  client:load />
+    </div>
   </main>
 </Layout>
+
+<style>
+  .vs-word {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>
