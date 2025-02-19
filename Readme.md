@@ -10,5 +10,5 @@ You can check the list of projects here and also, create a PR to add to this pro
 ## Creating Project from template
 - firstly, install the gonew package
 `go install golang.org/x/tools/cmd/gonew@latest`
-- secondly, create the template (replace the {project-module} with your project name i.e github.com/litmus-zhan/url-shortener)
+- secondly, create the template (replace the {project-module} with your project name i.e github.com/litmus-zhang/url-shortener)
 `gonew github.com/litmus-zhang/90mins-Apps/templates/go-template  {project-module}`
